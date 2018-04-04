@@ -15,9 +15,9 @@ public class ContaTest {
 	
 	@Test
 	public void testaArrayDeContas() {
-		contas[0] = new Conta();
-		contas[0].saldo = 100;
+		contas[0] = new Conta(new Cliente(""));
+		contas[0].setSaldo(100);
 		contas[0].deposita(50);
-		assertEquals("O saldo deve ser 100+50=150", 150, contas[0].saldo,0);
+		assertEquals("O saldo deve ser 100+50=150", 150, contas[0].getSaldo(),0);
 	}
 }

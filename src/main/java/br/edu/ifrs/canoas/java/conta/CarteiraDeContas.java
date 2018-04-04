@@ -2,7 +2,7 @@ package br.edu.ifrs.canoas.java.conta;
 
 public class CarteiraDeContas {
 
-	public Conta minhasContas[];
+	private Conta minhasContas[];
 
 	public boolean criaContas(int tamanho) {
 		if (tamanho < 1)
@@ -11,7 +11,7 @@ public class CarteiraDeContas {
 		minhasContas = new Conta[tamanho];
 		
 		for (int i = 0; i < minhasContas.length; i++) {
-			minhasContas[i] = new Conta();
+			minhasContas[i] = new Conta(new Cliente("11111111111"));
 		}
 		
 		return true;
@@ -29,9 +29,13 @@ public class CarteiraDeContas {
 		double total=0;
 		
 		for (Conta conta : minhasContas) {
-			total += conta.saldo;
+			total += conta.getSaldo();
 		}
 		return total;
+	}
+
+	public Conta[] getMinhasContas() {
+		return minhasContas;
 	}
 
 }

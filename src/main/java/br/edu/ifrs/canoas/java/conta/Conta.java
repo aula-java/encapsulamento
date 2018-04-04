@@ -1,22 +1,26 @@
 package br.edu.ifrs.canoas.java.conta;
 
 public class Conta {
-	int numero;
-	double saldo;
-	double limite;
-	Cliente titular;
+	private int numero;
+	private double saldo;
+	private double limite;
+	private Cliente titular;
+	
+	public Conta(Cliente titular) {
+		this.titular=titular;
+	}
 
 	boolean saca(double valor) {
-		if (this.saldo < valor) {
+		if (this.getSaldo() < valor) {
 			return false;
 		} else {
-			this.saldo = this.saldo - valor;
+			this.setSaldo(this.getSaldo() - valor);
 			return true;
 		}
 	}
 
 	void deposita(double quantidade) {
-		this.saldo += quantidade;
+		this.setSaldo(this.getSaldo() + quantidade);
 	}
 
 	boolean transfere(Conta destino, double valor) {
@@ -28,6 +32,14 @@ public class Conta {
 			destino.deposita(valor);
 			return true;
 		}
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
 	}
 
 }

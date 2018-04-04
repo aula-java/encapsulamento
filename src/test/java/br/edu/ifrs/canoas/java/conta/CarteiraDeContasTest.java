@@ -19,14 +19,15 @@ public class CarteiraDeContasTest {
 	@Test
 	public void testCriaContasCom10() {
 		carteira.criaContas(10);
-		assertEquals("Foi criada uma carteira com 10 contas", 10, carteira.minhasContas.length);
+		assertEquals("Foi criada uma carteira com 10 contas", 10, 
+				carteira.getMinhasContas().length);
 	}
 	
 	@Test
 	public void testCriaContasComNegativo() {
 		carteira.criaContas(-1);
 		assertNull("O tamanho eh NULL pois n�o foi criado o array "
-				+ "com valor negativo",carteira.minhasContas);
+				+ "com valor negativo",carteira.getMinhasContas());
 	}
 	
 
@@ -34,7 +35,7 @@ public class CarteiraDeContasTest {
 	public void testCriaContasComZero() {
 		assertFalse("Deve retornar Falso pois nao eh possivel criar contas com Zero", carteira.criaContas(0));
 		assertNull("O tamanho eh NULL pois n�o foi criado o array com valor Zero",
-				carteira.minhasContas);
+				carteira.getMinhasContas());
 	}
 
 	@Test(expected = NullPointerException.class)
@@ -46,11 +47,11 @@ public class CarteiraDeContasTest {
 	public void testAtualizaSaldoContaCom100() {
 		carteira.criaContas(5);
 		assertTrue("Eh possivel adicionar 100 na conta 0", carteira.depositaNaConta(0, 100));
-		assertEquals("O saldo da posicao 0 deve ser 100", 100, carteira.minhasContas[0].saldo,0);
+		assertEquals("O saldo da posicao 0 deve ser 100", 100, carteira.getMinhasContas()[0].getSaldo(),0);
 		assertTrue("Eh possivel adicionar -5 na conta 0", carteira.depositaNaConta(0, -5));
-		assertEquals("O saldo da posicao 0 deve ser 100", 95, carteira.minhasContas[0].saldo,0);
-		assertFalse("N�o eh possivel sacar mais que o limite", carteira.minhasContas[0].saca(100));
-		assertTrue("Eh possivel sacar ate o limite", carteira.minhasContas[0].saca(95));
+		assertEquals("O saldo da posicao 0 deve ser 100", 95, carteira.getMinhasContas()[0].getSaldo(),0);
+		assertFalse("N�o eh possivel sacar mais que o limite", carteira.getMinhasContas()[0].saca(100));
+		assertTrue("Eh possivel sacar ate o limite", carteira.getMinhasContas()[0].saca(95));
 	}
 	
 	@Test
