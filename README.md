@@ -2,7 +2,7 @@
 
 ### [Exercício: Conceitos Avançados: Encapsulamento](https://aula-java.github.io/aulas/avancado/#/2)
 
-1. Clone o projeto [https://github.com/aula-java/encapsulamento](https://github.com/aula-java/encapsulamento)
+1. Clone o projeto
 2. Adicione modificadores de visibilidade (todos atributos privados e somente os métodos que necessitam ser públicos definidos como public). Siga as convenções para cada atributo e método. Aplique para as classes CarteiraDeContas, Conta e Cliente. Corrija todas as classes que geraram erros de compilação.
 3. Crie Getters e Setters sempre que necessário para os atributos das classes e atualize as classes de teste para que funcionem.
 4. Adicione um atributo na classe Cliente de tipo int que se chama identificador. Esse identificador deve ter um valor único para cada instância do tipo Cliente. O primeiro Cliente instanciado tem identificador 1, o segundo 2, e assim por diante. Você deve utilizar os recursos aprendidos para resolver esse problema (crie getter para esse atributo, obviamente que setter não é necessário).
