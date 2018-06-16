@@ -1,6 +1,6 @@
-## [Linguagem de Programação Orientada a Objetos 1](https://aula-java.github.io/aulas/lpoo-1.html)
+## [Linguagem de Programação Orientada a Objetos 1](https://rodrigonoll.github.io/java/lpoo-1.html)
 
-### [Exercício: Conceitos Avançados: Encapsulamento](https://aula-java.github.io/aulas/avancado/#/2)
+### [Exercício: Conceitos Avançados: Encapsulamento](https://rodrigonoll.github.io/java/avancado/#/2)
 
 1. Clone o projeto
 2. Adicione modificadores de visibilidade (todos atributos privados e somente os métodos que necessitam ser públicos definidos como public). Siga as convenções para cada atributo e método. Aplique para as classes CarteiraDeContas, Conta e Cliente. Corrija todas as classes que geraram erros de compilação.
